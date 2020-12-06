@@ -14,6 +14,8 @@ interface BaseRepositoryInterface
 
     public function update(array $attributes): bool;
 
+    public function whereIn(string $column , array $array);
+
     public function allQuery($columns = array('*'), string $orderBy = 'id', string $sortBy = 'asc' , array $with = []);
 
     public function all($columns = array ('*'), string $orderBy = 'id', string $sortBy = 'asc' , array $with = [] , int $paginate = 0);

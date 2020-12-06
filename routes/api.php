@@ -20,4 +20,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::group(['namespace'=>'Api'] ,function (){
    Route::post('auth/register' , 'AuthController@register');
    Route::post('auth/login' , 'AuthController@login');
+
+   Route::post('booking/search' , 'BookingController@searchForTrip');
+   Route::group(['middleware' => 'auth:api'] ,function (){
+       Route::post('booking/book-trip' , 'BookingController@bookATrip');
+
+   });
+
 });

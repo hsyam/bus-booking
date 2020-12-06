@@ -56,20 +56,23 @@ class DatabaseSeeder extends Seeder
         Route::query()->insert([
 
             [
-                'name' => 'cairo - qena' ,
+                'name' => 'Cairo to AlFayyum' ,
             ],
             [
-                'name' => 'cairo - AlMinya' ,
+                'name' => 'cairo to AlMinya' ,
             ],
             [
-                'name' => 'cairo - Sohag' ,
+                'name' => 'Cairo to Asyut' ,
             ],
             [
-                'name' => 'qena - cairo' ,
+                'name' => 'AlFayyum to AlMinya' ,
             ],
 
             [
-                'name' => 'Sohag - Giza' ,
+                'name' => 'AlFayyum to Asyut' ,
+            ],
+            [
+                'name' => 'AlMinya to Asyut' ,
             ],
 
 
@@ -91,29 +94,6 @@ class DatabaseSeeder extends Seeder
                 'station_id' => 3 ,
                 'station_order' =>3 ,
             ],
-
-            [
-                'route_id' => 1,
-                'station_id' => 4 ,
-                'station_order' =>4 ,
-            ],
-
-            [
-                'route_id' => 1,
-                'station_id' => 5 ,
-                'station_order' =>5 ,
-            ],
-
-            [
-                'route_id' => 1,
-                'station_id' => 6 ,
-                'station_order' =>6 ,
-            ],
-            [
-                'route_id' => 1,
-                'station_id' => 7 ,
-                'station_order' =>7 ,
-            ],
             [
                 'route_id' => 2,
                 'station_id' => 1 ,
@@ -162,49 +142,16 @@ class DatabaseSeeder extends Seeder
                 'station_id' => 5 ,
                 'station_order' =>5 ,
             ],
-            [
-                'route_id' => 3,
-                'station_id' => 6 ,
-                'station_order' =>6 ,
-            ],
 
-            [
-                'route_id' => 4,
-                'station_id' => 1 ,
-                'station_order' =>7 ,
-            ],
-            [
-                'route_id' => 4,
-                'station_id' => 2 ,
-                'station_order' =>6 ,
-            ],
             [
                 'route_id' => 4,
                 'station_id' => 3 ,
-                'station_order' =>5 ,
+                'station_order' =>1 ,
             ],
-
             [
                 'route_id' => 4,
                 'station_id' => 4 ,
-                'station_order' =>4 ,
-            ],
-
-            [
-                'route_id' => 4,
-                'station_id' => 5 ,
-                'station_order' =>3 ,
-            ],
-
-            [
-                'route_id' => 4,
-                'station_id' => 6 ,
                 'station_order' =>2 ,
-            ],
-            [
-                'route_id' => 4,
-                'station_id' => 7 ,
-                'station_order' =>1 ,
             ],
             [
                 'route_id' => 5,
@@ -213,25 +160,25 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'route_id' => 5,
-                'station_id' => 5 ,
+                'station_id' => 4 ,
                 'station_order' =>2 ,
             ],
             [
                 'route_id' => 5,
-                'station_id' => 4 ,
-                'station_order' =>3 ,
+                'station_id' => 5 ,
+                'station_order' =>2 ,
             ],
             [
-                'route_id' => 5,
-                'station_id' => 3 ,
-                'station_order' =>4 ,
+                'route_id' => 6,
+                'station_id' => 5 ,
+                'station_order' =>1 ,
+            ],
+            [
+                'route_id' => 6,
+                'station_id' => 6 ,
+                'station_order' =>2 ,
             ],
 
-            [
-                'route_id' => 5,
-                'station_id' => 2 ,
-                'station_order' =>5 ,
-            ],
 
         ]);
 

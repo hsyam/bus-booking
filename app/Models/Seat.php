@@ -9,7 +9,7 @@ class Seat extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['trip_id' , 'start_station' , 'end_station' , 'status' , 'is_trip_finished'  ];
+    protected $fillable = ['trip_id' , 'start_station_id' , 'end_station_id' , 'start_station_order' , 'end_station_order' , 'status' , 'is_trip_finished'  ];
 
     public function Trip()
     {

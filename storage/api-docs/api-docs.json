@@ -44,7 +44,7 @@
                 },
                 "responses": {
                     "200": {
-                        "description": "Display a listing of projects.",
+                        "description": "Display a user object.",
                         "content": {
                             "application/json": {
                                 "schema": {}
@@ -97,7 +97,7 @@
                 },
                 "responses": {
                     "200": {
-                        "description": "Display a listing of projects.",
+                        "description": "Display a user object.",
                         "content": {
                             "application/json": {
                                 "schema": {}
@@ -113,6 +113,138 @@
                         }
                     }
                 }
+            }
+        },
+        "/api/booking/search": {
+            "post": {
+                "tags": [
+                    "Booking"
+                ],
+                "operationId": "App\\Http\\Controllers\\Api\\BookingController::searchForTrip",
+                "requestBody": {
+                    "description": "Search for a trip",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "email",
+                                    "password"
+                                ],
+                                "properties": {
+                                    "start_station": {
+                                        "type": "int",
+                                        "example": "1"
+                                    },
+                                    "end_station": {
+                                        "type": "int",
+                                        "example": "3"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Display a listing of Trips.",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Invalid gavien data.",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer": []
+                    }
+                ]
+            }
+        },
+        "/api/booking/book-trip": {
+            "post": {
+                "tags": [
+                    "Booking"
+                ],
+                "operationId": "App\\Http\\Controllers\\Api\\BookingController::bookATrip",
+                "requestBody": {
+                    "description": "Book a trip",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "email",
+                                    "password"
+                                ],
+                                "properties": {
+                                    "start_station": {
+                                        "type": "int",
+                                        "example": "1"
+                                    },
+                                    "end_station": {
+                                        "type": "int",
+                                        "example": "3"
+                                    },
+                                    "trip_id": {
+                                        "type": "int",
+                                        "example": "1"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Display a listing of Trips.",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Invalid gavien data.",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Cant find trip.",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Cant find trip.",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearer": []
+                    }
+                ]
             }
         }
     },

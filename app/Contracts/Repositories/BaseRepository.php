@@ -4,6 +4,7 @@
 namespace App\Contracts\Repositories;
 
 
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Query\Builder;
 
@@ -95,7 +96,7 @@ abstract class  BaseRepository implements BaseRepositoryInterface
      * @param array $data
      * @return Collection
      */
-    public function findBy(array $data)
+    public function findBy(array $data) : Collection
     {
         return $this->model->where($data)->get();
     }
@@ -154,5 +155,10 @@ abstract class  BaseRepository implements BaseRepositoryInterface
     public function findByIdWithRelation($id , $where = [] , $with = [] )
     {
         return $this->model->where('id' ,$id)->where($where)->with($with)->firstOrFail();
+    }
+
+    public function whereIn($column ,  $array) : Collection
+    {
+        return $this->model->whereIn($column  , $array)->get();
     }
 }

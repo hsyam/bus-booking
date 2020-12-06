@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function (\App\Repositories\UserRepository $repo) {
-    return $repo->all();
+Route::get('/', function () {
+    return view('welcome');
 });
+

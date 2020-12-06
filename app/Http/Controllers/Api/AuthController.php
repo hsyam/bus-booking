@@ -26,7 +26,7 @@ class AuthController extends Controller
      *    ),
      * ),
      *
-     *     @OA\Response(response="200", description="Display a listing of projects." , @OA\JsonContent()),
+     *     @OA\Response(response="200", description="Display a user object." , @OA\JsonContent()),
      *     @OA\Response(response="422", description="Invalid gavien data." , @OA\JsonContent())
      * )
      *
@@ -56,7 +56,7 @@ class AuthController extends Controller
      *       @OA\Property(property="password", type="string", format="password", example="123456"),
      *    ),
      * ),
-     *     @OA\Response(response="200", description="Display a listing of projects." , @OA\JsonContent()),
+     *     @OA\Response(response="200", description="Display a user object." , @OA\JsonContent()),
      *     @OA\Response(response="422", description="Invalid gavien data." , @OA\JsonContent())
      * )
      *

@@ -16,8 +16,10 @@ class CreateSeatsTable extends Migration
         Schema::create('seats', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('trip_id');
-            $table->unsignedBigInteger('start_station');
-            $table->unsignedBigInteger('end_station');
+            $table->unsignedBigInteger('start_station_id');
+            $table->unsignedBigInteger('start_station_order');
+            $table->unsignedBigInteger('end_station_id');
+            $table->unsignedBigInteger('end_station_order');
             $table->enum('status' , ['reserved', 'canceled' ])->default('reserved');
             $table->boolean('is_trip_finished');
             $table->foreign('trip_id')->references('id')->on('trips');
