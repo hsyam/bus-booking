@@ -18,9 +18,8 @@ class CreateSeatsTable extends Migration
             $table->unsignedBigInteger('trip_id');
             $table->unsignedBigInteger('start_station');
             $table->unsignedBigInteger('end_station');
-            $table->enum('status' , ['reserved', 'canceled' ]);
+            $table->enum('status' , ['reserved', 'canceled' ])->default('reserved');
             $table->boolean('is_trip_finished');
-
             $table->foreign('trip_id')->references('id')->on('trips');
              $table->timestamps();
         });

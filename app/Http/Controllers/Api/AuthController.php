@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\LoginUserRequest;
 use App\Http\Requests\RegisterUserRequest;
 use App\Services\UserService;
-use http\Client\Curl\User;
 use Illuminate\Http\Request;
 
 class AuthController extends Controller
@@ -61,7 +60,7 @@ class AuthController extends Controller
      *     @OA\Response(response="422", description="Invalid gavien data." , @OA\JsonContent())
      * )
      *
-     * @param RegisterUserRequest $request
+     * @param LoginUserRequest $request
      * @param UserService $userService
      * @return response()
      */

@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Route extends Model
 {
     use HasFactory;
+    protected $fillable = ['name'];
+
+    public function Stations()
+    {
+        return $this->belongsToMany(Station::class , 'routes_stations' , 'route_id' , 'station_id')->withPivot('station_order');
+    }
+
+
+
 }
