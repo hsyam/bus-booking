@@ -9,7 +9,6 @@ use Illuminate\Database\Query\Builder;
 
 interface BaseRepositoryInterface
 {
-    public function __construct(Model $model);
 
     public function create(array $attributes);
 

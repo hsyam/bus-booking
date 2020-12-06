@@ -48,7 +48,7 @@ abstract class  BaseRepository implements BaseRepositoryInterface
      * @return Builder
      */
 
-    public function allQuery($columns = ['*'], string $orderBy = 'id', string $sortBy = 'decs' , array  $with = [])
+    public function allQuery($columns = ['*'], string $orderBy = 'id', string $sortBy = 'desc' , array  $with = [])
     {
         return $this->model->orderBy($orderBy, $sortBy)->with([]) ;
     }
